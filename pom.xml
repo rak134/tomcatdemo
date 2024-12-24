@@ -34,6 +34,14 @@
         </dependency>
     </dependencies>
 
+    <distributionManagement>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <name>ip-172-31-23-255-snapshots</name>
+            <url>http://54.172.160.4:8081/artifactory/libs-snapshot-local</url>
+        </snapshotRepository>
+    </distributionManagement>
+
     <build>
         <finalName>sample-webapp</finalName>
         <plugins>
