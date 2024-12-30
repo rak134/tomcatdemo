@@ -18,7 +18,7 @@
     </properties>
          
 <properties>
-    <sonar.projectKey>demoapp-project</sonar.projectKey>
+    <sonar.projectKey>demoapp</sonar.projectKey>
     <sonar.host.url>http://13.233.140.129:9000</sonar.host.url>
 </properties>
     <dependencies>
