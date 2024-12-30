@@ -5,8 +5,8 @@ pipeline {
         // Define the SonarQube server URL
         SONARQUBE_URL = 'http://13.233.140.129:9000/'
         // Define the SonarQube credentials ID and retrieve the token
-        SONARQUBE_CREDENTIALS_ID = 'sonar-id'  // Make sure this is set in Jenkins' global credentials
-        SONARQUBE_TOKEN = credentials('sqp_77ddb0cdc37745d02db0372f33a63049de8d56c4')  // Use the SonarQube token stored as "Secret text"
+        SONARQUBE_CREDENTIALS_ID = 'sonar-token'  // Make sure this is set in Jenkins' global credentials
+        SONARQUBE_TOKEN = credentials('sonar-cred')  // Use the SonarQube token stored as "Secret text"
     }
 
     stages {
