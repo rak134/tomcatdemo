@@ -11,16 +11,18 @@
     <name>Sample Web Application</name>
     <description>A simple Java web application for educational purposes</description>
 
+    <!-- Merged Properties Section -->
     <properties>
+        <!-- Compiler Properties -->
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <!-- SonarQube Properties -->
+        <sonar.projectKey>demoapp</sonar.projectKey>
+        <sonar.host.url>http://13.233.140.129:9000</sonar.host.url>
     </properties>
-         
-<properties>
-    <sonar.projectKey>demoapp</sonar.projectKey>
-    <sonar.host.url>http://13.233.140.129:9000</sonar.host.url>
-</properties>
+
     <dependencies>
         <!-- Servlet API for web development -->
         <dependency>
@@ -76,7 +78,6 @@
                 <artifactId>sonar-maven-plugin</artifactId>
                 <version>3.9.1.2184</version>
             </plugin>
-
         </plugins>
     </build>
 </project>
