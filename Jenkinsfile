@@ -5,7 +5,7 @@ pipeline {
         // Define the SonarQube server URL and credentials ID
         SONARQUBE_URL = 'http://13.233.140.129:9000/'
         SONARQUBE_CREDENTIALS_ID = 'sonar-id' // Set this in Jenkins credentials for SonarQube server
-        SONARQUBE_TOKEN = credentials('demoapp-project') // Use the SonarQube token stored as "Secret text"
+        SONARQUBE_TOKEN = credentials('sonar-id') // Use the SonarQube token stored as "Secret text"
     }
 
     stages {
