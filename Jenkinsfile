@@ -2,9 +2,10 @@ pipeline {
     agent any
 
     environment {
-        // Define the SonarQube server URL and credentials ID (ensure this is configured in Jenkins' global settings)
-        SONARQUBE_URL ='http://13.233.140.129:9000/'
-        SONARQUBE_CREDENTIALS_ID ='sonar-id' // Set this in Jenkins credentials
+        // Define the SonarQube server URL and credentials ID
+        SONARQUBE_URL = 'http://13.233.140.129:9000/'
+        SONARQUBE_CREDENTIALS_ID = 'sonar-id' // Set this in Jenkins credentials for SonarQube server
+        SONARQUBE_TOKEN = credentials('demoapp-project') // Use the SonarQube token stored as "Secret text"
     }
 
     stages {
@@ -20,15 +21,12 @@ pipeline {
             steps {
                 echo 'Running SonarQube analysis...'
 
-                // Trigger SonarQube analysis using Maven
+                // Trigger SonarQube analysis using Maven with additional parameters
                 script {
                     withSonarQubeEnv('SonarQube') { 
-                        sh 'mvn clean verify sonar:sonar'
+                        sh "mvn clean verify sonar:sonar -Dsonar.projectKey=demoapp-project -Dsonar.host.url=${SONARQUBE_URL} -Dsonar.login=${SONARQUBE_TOKEN}"
                     }
                 }
-
-                // If you're using SonarScanner CLI instead of Maven:
-                // sh 'sonar-scanner -Dsonar.projectKey=your_project_key -Dsonar.sources=src'
             }
         }
 
