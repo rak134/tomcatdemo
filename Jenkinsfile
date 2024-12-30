@@ -3,8 +3,8 @@ pipeline {
 
     environment {
         // Define the SonarQube server URL and credentials ID (ensure this is configured in Jenkins' global settings)
-        SONARQUBE_URL = 'http://13.233.140.129:9000/'
-        SONARQUBE_CREDENTIALS_ID = 'sonar-id' // Set this in Jenkins credentials
+        SONARQUBE_URL ='http://13.233.140.129:9000/'
+        SONARQUBE_CREDENTIALS_ID ='sonar-id' // Set this in Jenkins credentials
     }
 
     stages {
