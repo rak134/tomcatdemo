@@ -21,6 +21,8 @@
         <!-- SonarQube Properties -->
         <sonar.projectKey>demoapp</sonar.projectKey>
         <sonar.host.url>http://172.31.39.158:9000</sonar.host.url>
+        <sonar.login>admin</sonar.login> <!-- Replace 'admin' with the actual username -->
+        <sonar.password>admin123</sonar.password> <!-- Replace 'admin123' with the actual password -->
     </properties>
 
     <dependencies>
