@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         // Define the SonarQube server URL
-        SONARQUBE_URL = 'http://13.233.140.129:9000/'
+        SONARQUBE_URL = 'http://3.108.218.116:9000/'
         // Define the SonarQube credentials ID and retrieve the token
         SONARQUBE_CREDENTIALS_ID = 'sonar-token'  // Make sure this is set in Jenkins' global credentials
         SONARQUBE_TOKEN = credentials('sonar-cred')  // Use the SonarQube token stored as "Secret text"
